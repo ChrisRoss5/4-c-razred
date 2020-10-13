@@ -1,0 +1,72 @@
+@keyframes image {
+  0% {
+    border-color: red;
+  }
+
+  20% {
+    border-color: blue;
+  }
+
+  40% {
+    border-color: green;
+  }
+
+  60% {
+    border-color: yellow;
+  }
+
+  80% {
+    border-color: black;
+  }
+
+  100% {
+    border-color: red;
+  }
+}
+
+.image-wrapper {
+  margin: 200px auto;
+  width: 800px;
+  height: 400px;
+  position: relative;
+  box-shadow: 0 0 10vw 6vw white;
+  background: #f2f2f2;
+}
+
+.image-wrapper img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 250ms ease;
+  border: 8px solid;
+  animation: image 2s linear infinite;
+}
+
+.image-wrapper:hover img {
+  transform: none;
+  animation-play-state: paused;
+}
+
+.image-1 {
+  clip-path: polygon(0 0, 0 32%, 28% 0);
+  transform: translate(-10px, -10px);
+  transform-origin: top;
+}
+
+.image-2 {
+  clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+  transform: translate(-30px, 5px);
+}
+
+.image-3 {
+  clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+  transform: translate(-15px, -10px);
+}
+
+.image-4 {
+  clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+  transform: translate(-32px, 5px);
+  transform-origin: top;
+}

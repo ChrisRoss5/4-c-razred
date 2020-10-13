@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form > div {
+  margin: 20px;
+}
+
+input,
+textarea {
+  display: block;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 30px;
+  min-width: 200px;
+}
+
+form > div {
+  flex: 1 1 0;
+}
+
+form > div:last-of-type {
+  flex: 1 1 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button {
+  margin: 0 auto;
+  padding: 5px 50px;
+  font-size: 50px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  #content {
+    padding: 40px 0;
+  }
+}
